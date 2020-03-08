@@ -5,16 +5,16 @@
     /*最小宽度*/
     min-width:320px;
     margin:0 auto;
-    height:1000px;
-    background-color:#ccc;
+    background-color:#eee;
 }
 
 .jd_search{
     width:100%;
     max-width:640px;
     height:40px;
-    background:#e92322;
+    background:rgba(233,35,34,0);
     position:fixed;
+    z-index:999;
 }
 .jd_logo{
     width:56px;
@@ -63,4 +63,149 @@
     background-position:-56px -108px;
     left:80px;
     top:9px;
+}
+
+.jd_banner{
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+.jd_bannerImg{
+    width:800%;
+}
+.jd_bannerImg>li{
+    width: 12.5%;
+    float:left;
+}
+.jd_bannerImg>li img{
+    /*文本基线消除
+    1.设置块元素
+    2.文本大小设为0
+    3.vertical-align:bottom*/
+    width: 100%;
+    vertical-align:bottom;
+}
+.jd_bannerIndicator{
+    width:128px;
+    height:10px;
+    position:absolute;
+    left:50%;
+    bottom:5px;
+    transform:translate(-50%);
+}
+.jd_bannerIndicator>li{
+    width:6px;
+    height:6px;
+    border-radius:3px;
+    border:1px solid #fff;
+    float:left;
+    margin-left:10px;
+}
+.jd_bannerIndicator>li.active{
+    background-color:#fff;
+}
+
+.jd_nav{
+    width: 100%;
+    padding:10px 0;
+    background-color: #fff;
+}
+.jd_nav li{
+    float:left;
+    width:25%;
+    text-align:center;
+}
+.jd_nav li img{
+    width:40px;
+}
+.jd_nav li p{
+    line-height: 25px;
+}
+
+.jd_product{
+    width:100%;
+}
+.jd_productBox{
+    width:100%;
+    margin-top:10px;
+    background-color: #fff;
+    box-shadow:1px 1px 1px #ccc;
+}
+.jd_productBox>.jd_pTip{
+    width:100%;
+    height:30px;
+    line-height:30px;
+    border-bottom:1px solid #ccc;
+    color:#666;
+    
+}
+.jd_productBox>.jd_pTip>h3{
+    position:relative;
+    padding-left:30px;
+}
+.jd_productBox>.jd_pTip>h3::before{
+    content:"";
+    position:absolute;
+    width:3px;
+    height:12px;
+    background-color: #e92322;
+    left:-8px;
+    top:9px;
+}
+
+.a_50{
+    width:50%;
+    /*因为是超链接*/
+    display:block;
+}
+.a_50>img{
+    width:100%;
+    display:block;
+}
+.b_right{
+    border-right:1px solid #ccc;
+}
+.b_bottom{
+    border-bottom:1px solid #ccc;
+}
+
+.jd_sk > .jd_pTip{
+    border-bottom:none;
+}
+.jd_sk > .jd_pTip  .jd_sk_icon{
+    width:16px;
+    height:20px;
+    background: url("../uploads/seckill-icon.png");
+    background-size:16px 20px;
+    margin-top:3px;
+
+}
+.jd_sk>.jd_pTip .jd_sk_text{
+    color:#e92322;
+}
+.jd_sk>.jd_pTip .jd_sk_time>span{
+    width:13px;height:18px;
+    display:inline-block;
+    line-height:18px;
+    color:#fff;
+    background-color:#000;
+    text-align:center;
+}
+.jd_sk>.jd_pTip .jd_sk_time>span:nth-last-of-type(3n){
+    color:#000;
+    background-color: transparent;
+    width:8px;
+}
+
+.jd_sk .jd_pContent{
+    padding:20px;
+}
+.jd_sk .jd_pContent >ul>li{
+    width:33.33%;
+    float:left;
+    text-align:center;
+}
+.jd_sk .jd_pContent >ul>li img{
+    width:60%;
+    display:inline-block;
 }
